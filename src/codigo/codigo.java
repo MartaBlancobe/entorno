@@ -20,9 +20,9 @@ public class codigo {
 	 *acu1, acu2, acu3 y def son variables que utilizaremos para almacenar las notas de las uf
 	 * 
      */
-double unidad1, unidad2, unidad3; 
+double u1, u2, u3; 
 
-double acumulado1, acumulado2, acumulado3, definitiva; 
+double ac1, ac2, ac3, def; 
 
 //utilizames ecaner para poder introducir datos 
 /**
@@ -53,7 +53,7 @@ System.out.print("ingrese nota 1: ");
 
  
 
-unidad1= entrada.nextDouble(); 
+u1= entrada.nextDouble(); 
 
  
 /**
@@ -66,13 +66,13 @@ System.out.print("ingrese nota 2: ");
 
  
 
-unidad2= entrada.nextDouble(); 
+u2= entrada.nextDouble(); 
 
 System.out.print("ingrese nota 3: "); 
 
  
 
-unidad3= entrada.nextDouble(); 
+u3= entrada.nextDouble(); 
 
  
 
@@ -96,7 +96,7 @@ public void comprobarcion(){
 	/**
 	 *A traves de  if comprobaremos que cada una de las notas sea mayor o igual a 0 y menor o igual que 10
 	 */
-if (unidad1>10) { 
+if (u1>10) { 
 
 System.out.println(" nota1 mal introducida"); 
 
@@ -110,7 +110,7 @@ System.out.println(" nota1 correcta");
 
  
 
-if (unidad2>10) { 
+if (u2>10) { 
 
 System.out.println(" nota2 mal introducida"); 
 
@@ -122,7 +122,7 @@ System.out.println(" nota2 correcta");
 
 } 
 
-if (unidad3>10) { 
+if (u3>10) { 
 
 System.out.println(" nota3 mal introducida"); 
 
@@ -158,15 +158,15 @@ public void Calculonotas() {
 	 *Def se refiere a la nota definitiva siendo esta la suma de los 3 acumulados
 	 */
 
-acumulado1= unidad1*0.35; 
+ac1= u1*0.35; 
 
-acumulado2 = unidad2 * 0.35; 
+ac2 = u2 * 0.35; 
 
-acumulado3 = unidad3 * 0.30; 
+ac3 = u3 * 0.30; 
 
  
 
-definitiva = acumulado1 + acumulado2+ acumulado3; 
+def = ac1 + ac2+ ac3; 
 
  
 
@@ -190,29 +190,29 @@ public void Mostrar() {
 
 System.out.println(" notas introducidas son:"); 
 
-System.out.println(" nota1 = " + unidad1); 
+System.out.println(" nota1 = " + u1); 
 
-System.out.println(" nota2 = " + unidad2); 
+System.out.println(" nota2 = " + u2); 
 
-System.out.println(" nota3 = " + unidad3); 
+System.out.println(" nota3 = " + u3); 
 
 /**
  *Nos muestra por pantalla el valor de cada acumulado
  * 
  */
 
-System.out.println(" acumuado 1 = "+ acumulado1); 
+System.out.println(" acumuado 1 = "+ ac1); 
 
-System.out.println(" acumuado 2 = "+ acumulado2); 
+System.out.println(" acumuado 2 = "+ ac2); 
 
-System.out.println(" acumuado 3 = "+ acumulado3); 
+System.out.println(" acumuado 3 = "+ ac3); 
 
  
 /**
  *Nos muestra por pantalla el valor de la nota definitiva
  * 
  */
-System.out.println(" nota definitiva es = "+ definitiva); 
+System.out.println(" nota definitiva es = "+ def); 
 
  
 
@@ -232,13 +232,13 @@ public void aprobado() {
 	 *Si esta fuera de ese rango para que muestre error
 	 */
 
-if(definitiva<5 && definitiva>=0) { 
+if(def<5 && def>=0) { 
 
 System.out.println("suspendio"); 
 
 }else {  
 
-if (definitiva>=5 && definitiva<=10 ) { 
+if (def>=5 && def<=10 ) { 
 
 System.out.println("aprobado"); 
 
