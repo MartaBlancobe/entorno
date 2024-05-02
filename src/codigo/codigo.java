@@ -20,7 +20,7 @@ public class codigo {
 	 *acu1, acu2, acu3 y def son variables que utilizaremos para almacenar las notas de las uf
 	 * 
      */
-double u1, u2, u3; 
+double unidad1, unidad2, unidad3; 
 
 double ac1, ac2, ac3, def; 
 
@@ -53,7 +53,7 @@ System.out.print("ingrese nota 1: ");
 
  
 
-u1= entrada.nextDouble(); 
+unidad1= entrada.nextDouble(); 
 
  
 /**
@@ -66,13 +66,13 @@ System.out.print("ingrese nota 2: ");
 
  
 
-u2= entrada.nextDouble(); 
+unidad2= entrada.nextDouble(); 
 
 System.out.print("ingrese nota 3: "); 
 
  
 
-u3= entrada.nextDouble(); 
+unidad3= entrada.nextDouble(); 
 
  
 
@@ -96,7 +96,7 @@ public void comprobarcion(){
 	/**
 	 *A traves de  if comprobaremos que cada una de las notas sea mayor o igual a 0 y menor o igual que 10
 	 */
-if (u1>10) { 
+if (unidad1>10) { 
 
 System.out.println(" nota1 mal introducida"); 
 
@@ -110,7 +110,7 @@ System.out.println(" nota1 correcta");
 
  
 
-if (u2>10) { 
+if (unidad2>10) { 
 
 System.out.println(" nota2 mal introducida"); 
 
@@ -122,7 +122,7 @@ System.out.println(" nota2 correcta");
 
 } 
 
-if (u3>10) { 
+if (unidad3>10) { 
 
 System.out.println(" nota3 mal introducida"); 
 
@@ -158,11 +158,11 @@ public void Calculonotas() {
 	 *Def se refiere a la nota definitiva siendo esta la suma de los 3 acumulados
 	 */
 
-ac1= u1*0.35; 
+ac1= unidad1*0.35; 
 
-ac2 = u2 * 0.35; 
+ac2 = unidad2 * 0.35; 
 
-ac3 = u3 * 0.30; 
+ac3 = unidad3 * 0.30; 
 
  
 
@@ -190,11 +190,11 @@ public void Mostrar() {
 
 System.out.println(" notas introducidas son:"); 
 
-System.out.println(" nota1 = " + u1); 
+System.out.println(" nota1 = " + unidad1); 
 
-System.out.println(" nota2 = " + u2); 
+System.out.println(" nota2 = " + unidad2); 
 
-System.out.println(" nota3 = " + u3); 
+System.out.println(" nota3 = " + unidad3); 
 
 /**
  *Nos muestra por pantalla el valor de cada acumulado
