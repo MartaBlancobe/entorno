@@ -1,0 +1,881 @@
+/* Reset inicial */
+*{
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #3d3e3e;
+}
+
+
+/* modal bienvenida */
+#modalBienvenida{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	display: none;
+	z-index: 5;
+}
+
+
+#modalBoxB{
+	width: 800px;
+	height: 500px;
+	background-color: #f0f0f0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+	box-shadow: 0 0 5px #3a3a3b, 0 0 10px #d0d0df;
+}
+
+#modalBoxB>h1{
+	font-size: 4rem;
+	font-family: 'Niconne', cursive;
+	font-weight: normal;
+	margin-top: 59px;
+	margin-top: 109px;
+	background-color: transparent;
+	border-radius: 20px;
+}
+
+
+#modalBoxB>button{
+	font-size: 3rem;
+	font-family: 'Niconne', cursive;
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.3);
+	color: black;
+}
+
+#modalBoxB button:hover {
+	background-color: rgba(0,0,0,0.7);
+	color: beige;
+}
+
+/* Aquí empieza el encabezado*/
+.nav-logo{
+	vertical-align: top;
+}
+.scroll-img{
+	padding: 0!important;
+	width: 63px!important;
+	height: 54px!important;
+	transition-property: padding;
+	transition-duration: 0.75s;
+	/* animation-play-state: running; */
+}
+
+#logo{
+	width: 170px;
+	height: 158px;
+	display: block;
+	background-color: transparent;
+	float: left;
+	padding: 10px;
+	transition-property: padding;
+	transition-duration: 0.75s;
+	z-index: 1000;
+	position: fixed;
+}
+
+
+#menu{
+	/* width: 100%; */
+	float: right;
+	margin-top:0px;
+	margin-right: 75px;
+	line-height: 150px;
+	list-style:none;
+	background-color: transparent;
+	overflow: hidden;
+	transition-property: line-height;
+	transition-duration: 0.75s;
+}
+.barraMenu{
+	height: 200px;
+	width: 100%;
+	float: right;
+	background-color: transparent;
+	padding-right: 100px;
+}
+#nav-menu{
+	width: 100%;
+	z-index: 1;
+	position: fixed;
+	background-color: rgb(30,30,30,0.5);
+	top:0;
+	left: 0;
+	height: 150px;
+	font-size: 2rem;
+	transition-property: top, height, font-size;
+	transition-duration: 0.75s;
+}
+
+.elementoMenu{
+	float: left;
+	margin: 0px 15px;
+	background-color: transparent;
+}
+
+
+.elementoMenu> a{
+	color: white;
+	font-family: 'Niconne';
+	transition-property: color;
+	transition-duration: 0.5s;
+	background-color: transparent;
+	
+}
+
+.elementoMenu >a:hover{
+	color: bisque;
+	text-shadow:2px 2px 4px #000000;
+}
+
+.elementoMenu:hover #submenu{
+	display: block;
+}
+
+
+ #encabezado{
+	width:100%;
+	height: 1000px;
+	/* padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(../Media/fondo.jpg);
+	background-size: cover; */
+}
+
+.fondosHero{
+	height: 1000px;
+	width: 100%;
+	background-size: cover;
+	position: absolute;
+}
+
+#fondoHero1{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../Media/fondo.jpg");
+}
+
+#fondoHero2{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../Media/hero.jpg");
+	
+}
+
+#fondoHero3{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../Media/fondo2.jpg");
+
+}
+
+body{
+	overflow-x: hidden;
+	margin-top: 0;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+
+}
+.mainSlide{
+	animation-name: mainSlideAnim;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.nextSlide{
+	animation-name: nextSlideAnim;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.hiddenSlide{
+	display: none;
+}
+
+/* Estos efectos son para que las imagenes se deslicen hacia los lados */
+@keyframes mainSlideAnim{
+	0%{margin-left: 0%;}
+	100%{margin-left: -100%;}
+
+}
+
+
+@keyframes nextSlideAnim{
+	0%{margin-left: 100%;}
+	100%{margin-left: 0%;}
+
+}
+
+/* Estos efectos son para el zoom de la galeria */
+
+@keyframes fadein{
+	0% {opacity: 0; top: 50px}
+	75% {opacity: 1;top: 50px}
+	100% {opacity: 1;top: 100px}
+}
+
+
+@keyframes fadeinSub{
+	0% {opacity: 0; top: 100px}
+	75% {opacity: 1;top: 100px}
+	100% {opacity: 1;top: 120px}
+}
+#tituloEncabezado{
+	font-size: 7rem;
+	text-align: center;
+	position: relative;
+	color: #E04A8C;
+	top: 100px;
+	margin: 0px;
+	font-family: 'Rubik Moonrocks';
+	font-size: 12rem;
+	background-color: transparent;
+	animation-name: fadein;
+	animation-duration: 3s;
+	text-shadow: 0 0 3px #d0d0df, 0 0 5px #d0d0df;
+}
+
+
+#subtituloEncabezado{
+	font-size: 3rem;
+	color: white;
+	top: 120px;
+	margin: 0px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	margin-left: 380px;
+	font-family: 'Niconne';
+	background-color: transparent;
+	text-shadow:2px 2px 4px #000000;
+	animation-name: fadeinSub;
+	animation-duration: 3s;
+}
+
+/* Aquí se acaba el encabezado*/
+
+
+
+/* Aquí empieza galeria*/
+
+#galeria{
+	width:calc(100%-100px);
+	height: 1080px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	overflow: hidden;
+	font-family: 'Niconne', cursive;
+}
+
+#contenedorGaleria{
+	
+color: beige;
+	
+font-size: 3rem;
+	
+text-align: center;
+	
+/* padding-bottom: 200px; */
+	
+margin-bottom: 200px;
+	
+width: calc(100% - 500px);
+	
+height: 800px;
+	
+margin-left: 250px;
+	
+margin-right: 250px;
+}
+
+.imgGaleria{
+	width: 207px;
+	height: 140px;
+	border-style: solid;
+	border-radius: 10%;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.imgGaleria:hover{
+box-shadow: 0px 0px 7px 4px #b4eae9;
+cursor: pointer;
+}
+
+.imgGaleria img{
+	width: 100%;
+	height: auto;
+}
+
+
+#modalLightBoxG{
+	width: 80vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	display: none;
+	top: 0;
+	z-index: 5;
+	margin-left: 5%;
+}
+
+
+#imageToShow{
+	width: 80vw;
+	height: 691px;
+	background-color:rgba(0,0,0,0.3);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+}
+
+	.imageLightBox{
+	width: 704px;
+	height: 457px;
+	border-radius: 50px;
+	margin-top: 100px;
+	}
+
+.lbButton{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: black;
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
+}
+
+.lbButton:hover{
+	border-color: bisque;
+}
+
+.bRight{
+	right: 30px;
+}
+
+.bLeft{
+ left: 30px; 
+}
+
+.lbButton i{
+	font-size: 4rem;
+	color: white;
+	background-color: black;
+}
+
+.lbButton:hover i{
+	color: white;
+}
+/* Aquí se acaba galeria*/
+
+
+/* Aquí ponemos tituloSeccion que servira para varios*/
+
+.tituloSeccion{
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 50px;
+	color: beige;
+	text-shadow:2px 2px 4px #000000;
+	font-family: 'Niconne', cursive;
+	font-size: 5rem;
+	background-color: transparent;
+	margin-right:350px;
+	margin-left: 350px;
+}
+
+
+/* Aquí acaba tituloSeccion*/
+
+
+/* Aquí empieza productos*/
+
+#productos{
+
+width:calc(100%-100px);
+
+height: 1080px;
+
+padding-top: 15px;
+
+padding-bottom: 15px;
+
+padding-left: 50px;
+
+padding-right: 50px;
+
+overflow: hidden;
+
+background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../Media/fondo1.jpg);
+
+background-size: cover;
+}
+
+
+#contenedorEtiquetasPestanas{
+	width: calc(100% - 350px);
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	margin-top: 30px;
+	background-color: rgb(30,30,30,0.5);
+}
+
+
+.etiquetaPestanas{
+	width: calc(20% - 30px);
+	font-size: 2rem;
+	float: left;
+	text-align: center;
+	color: white;
+	font-family: 'Niconne';
+	margin-left: 5%;
+	margin-right: 11%;
+	background-color: transparent;
+	transition-property: color;
+	transition-duration: 0.5s;
+	padding-bottom: 5px;
+}
+.pestanaActiva{
+	color:bisque;
+	/* text-decoration: underline; */
+	border-bottom-style: solid;
+}
+.etiquetaPestanas:hover{
+	transform: scale(1.2,1.2);
+	cursor: pointer;
+}
+
+@keyframes animCont {
+	from { transform: scale(0.25, 0.25);};
+	to { transform: scale(1,1);};
+}
+
+.contAnimado{
+	animation-name: animCont;
+	animation-duration: 1s;
+}
+
+
+.contenedorProductos{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: calc(100% - 350px);
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+}
+
+.producto{
+	width: calc(33.33% - 75px);
+	height: calc(50% - 75px);
+	float: left;
+	margin-right: 37.5px;
+	margin-left:37.5px;
+	margin-top: 37.5px;
+	margin-bottom: 37.5px;
+	background-color: transparent;
+}
+
+
+#submenu{
+
+ width: 100px;
+	height: 150px;
+	list-style: none;
+	position: absolute;
+	z-index: 1;
+	display: none;
+	top: 100px;
+	background-color: rgba(50,50,50,0.75);
+}
+
+.elementoSubmenu{
+	width: 100%;
+	height: 50px;
+	line-height: 75px;
+	background-color: transparent;
+}
+
+.elementoSubmenu >a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+	font-family: 'Niconne';
+	transition-property: color;
+	transition-duration: 0.5;
+	background-color: transparent;
+}
+
+
+.elementoSubmenu >a:hover{
+color: bisque;
+text-shadow:2px 2px 4px #000000;
+}
+
+
+.imagenProducto{
+	width: 100%;
+	height: auto;
+	background-color: transparent;
+
+
+}
+
+.imagenProducto img{
+	width: 100%;
+	height: 220px;
+	border-radius: 20px;
+}
+
+
+.imagenProducto img:hover{
+	transform: scale(1.2,1.2);
+	box-shadow: 0px 0px 7px 4px #cacccc;
+	cursor: pointer;
+	
+}
+
+.nombreProducto{
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 0px;
+	color: white;
+	font-family: 'Niconne';
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 30px;
+	font-size: 1.5rem;
+}
+
+.nombreProducto:hover{
+	transform: scale(1.2,1.2);
+	color:bisque;
+}
+
+/* Aquí acaba productos*/
+
+/* Aquí empieza servicios*/
+#servicios{
+	width:calc(100%-100px);
+	height: 1080px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-size: cover;
+
+}
+
+
+#contenedorServicios{
+	width: calc(100% - 700px);
+	height: calc(100% - 200px);
+	margin-top:100px;
+	margin-bottom: 100px;
+	overflow: hidden;
+	margin-right: 350px;
+	margin-left: 350px;
+
+}
+
+
+
+#submenuServ{
+	width: 100px;
+	height: 150px;
+	list-style: none;
+	position: absolute;
+	z-index: 1;
+	display: none;
+	top: 100px;
+	background-color: rgba(50,50,50,0.75);
+
+}
+
+.elementoSubmenuServ{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: transparent;
+	
+}
+
+.elementoSubmenuServ >a{
+	text-decoration: none;
+	color: black;
+	font-size: 1.2rem;
+	font-family: 'Niconne';
+	transition-property: color;
+	transition-duration: 0.5;
+	background-color: transparent;
+	
+}
+
+
+
+
+
+.cajaTexto{
+text-align: center;
+color: white;
+font-size: 1.2rem;
+
+}
+
+
+#videoServicios{
+	width: 100%;
+	height: 500px;
+	margin-right: 75px;
+}
+
+#vs{
+	width: 100%;
+	height: 300px;
+	margin-right: 75px;
+}
+
+
+#multimedia{
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.cajaServicios > p{
+	font-size: 1.5rem;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	font-family:'Finlandica', cursive;
+
+}
+/* Aquí acaba servicios*/
+
+
+/* Aquí empieza contacto*/
+ #contacto{
+	width: 100%;
+	height: 950px;
+	overflow: hidden;
+	font-family: 'Niconne', cursive;
+	margin-top: 50px;
+	background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../Media/fondoC.jpg);
+	background-size: cover;
+}
+
+#textoContacto{
+	font-family: 'Niconne';
+	font-size: 2.5rem;
+	color: white;
+	background-color: transparent;
+	text-align: center;
+}
+
+#contenedorContacto{
+	width: calc(100% - 700px);
+	height: 600px;
+	background-color: transparent;
+	margin-right: 350px;
+	margin-left: 300px;
+	margin-top: 95px;
+	overflow: hidden;
+}
+
+
+#formulario{
+	width: calc(100% - 200px);
+	height: 550px;
+	float: left;
+	background-color:rgba(0,0,0,0.5);
+	margin-bottom: 50px;
+	margin-right: 150px;
+	margin-left: 150px;
+	border-radius: 30px;
+}
+
+
+input{
+	display: block;
+	height: 52px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 500px;
+	margin-left: 8%;
+	background-color: beige;
+}
+
+
+#botonEnviar{
+	width: 100px;
+	height: 70px;
+	border-radius: 15px;
+	background-color: beige;
+	align-items: center;
+	font-size: 1.5rem;
+	font-family: 'Niconne';
+	align-items: center;
+	top: auto;
+	margin-left: 40%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-style: solid;
+	border-color: black;
+	transition-property: color, border-style, background-color;
+	transition-duration: 1s;
+	cursor: pointer;
+}
+
+#botonEnviar:hover{
+	border-style: solid;
+	border-color: beige;
+	background-color: #3d3e3e;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+/* modal Reserva */
+#modalReserva{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	display: none;
+	z-index: 5;
+}
+
+
+#modalBoxR{
+	width: 800px;
+	height: 500px;
+	background-color: #f0f0f0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	text-align: center;
+	border-radius: 25px;
+	box-shadow: 0 0 5px #3a3a3b, 0 0 10px #d0d0df;
+}
+
+#modalBoxR>h1{
+	font-size: 3rem;
+	font-family: 'Niconne', cursive;
+	font-weight: normal;
+	margin-top: 85px;
+	background-color: transparent;
+}
+
+
+#modalBoxR>button{
+	font-size: 2rem;
+	font-family: 'Niconne', cursive;
+	padding: 10px 20px;
+	border-radius: 15px;
+	margin-top: 20px;
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+#mensajeReserva{
+	background-color: transparent;
+}
+#modalBoxR button:hover {
+	background-color: #3d3e3e;
+	color: beige;
+}
+
+
+
+/* Aquí acaba contacto*/
+
+
+/* Aquí empieza footer*/
+
+#pie{
+	width: 100%;
+	height: 100px;
+background-color: #3d3e3e;
+}
+
+
+.imgRs1 img {
+  width: 123px;
+  height: 106px;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 12px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 525px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imgRs1 img:hover{
+	color: beige;
+	cursor: pointer;
+	}
+	
+
+.imgRs2 img{
+	width: 123px;
+	height: 106px;
+  background-color: transparent;
+  border-style: solid;
+  float: left;
+  margin-right: 20px;
+  border-radius: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imgRs2 img:hover{
+	color: beige;
+	cursor: pointer;
+	}
+	
+.imgRs3 img {
+ width: 123px;
+  height: 106px;
+  background-color: transparent;
+  border-style: solid;
+  float: left;
+  margin-right: 20px;
+  border-radius: 12px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.imgRs3 img:hover{
+	color: beige;
+	cursor: pointer;
+	}
+	
+
+/* Aquí acaba footer*/

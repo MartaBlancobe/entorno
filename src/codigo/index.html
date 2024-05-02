@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sweet wall</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="preconnect" href="https://fonts.google.com/">
+	<script src="JS/script.js"></script>
+
+<!-- Fuentes -->
+<!-- Niconne -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+
+
+
+
+
+<!-- Rubik -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+<!-- Finlandica -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+
+
+<!-- Font-awesome -->
+<script src="https://kit.fontawesome.com/c3eccc7858.js" crossorigin="anonymous"></script>
+
+<!-- Imagenes hero -->
+
+<link rel="preload" as="image" href="Media/hero1.jpg">
+<link rel="preload" as="image" href="Media/hero2.jpg">
+<link rel="preload" as="image" href="Media/hero3.jpg">
+
+<!-- Animaciones en titulos de secciones -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+<!-- modal de bienvenida -->
+<div id="modalBienvenida">
+	<div id="modalBoxB">
+		<h1>Bienvenid@ a Sweet Hall</h1>
+		<button onclick="cerrarMBB()">Navegar</button>
+
+	</div>
+
+</div>
+<!-- modal reserva -->
+<div id="modalReserva">
+	<div id="modalBoxR">
+		<h1>Su reserva</h1>
+		<p id="mensajeReserva"></p>
+		<button onclick="cerrarMBR()">Cerrar</button>
+	</div>
+</div>
+<!--  Para el carrusel automático -->
+<header id="encabezado">
+	<div class="fondosHero" id="fondoHero1"></div>
+	<div class="fondosHero" id="fondoHero2"></div>
+	<div class="fondosHero" id="fondoHero3"></div>
+	
+<section class="barraMenu">	
+	
+	
+<nav id="nav-menu">
+		<a class="nav-logo" href="Index.html">
+			<img src="Media/logo.png" id="logo" alt="logotipo">
+		</a>
+<ul id="menu">
+	
+	<li class="elementoMenu"><a href="#encabezado" style="text-decoration:none">Inicio</a></li>
+	<li class="elementoMenu"><a href="#galeria" style="text-decoration:none">Galeria</a></li>
+	<li class="elementoMenu"><a href="#productos" style="text-decoration:none">Nuestros productos</a>
+
+	<ul id="submenu">
+<li class="elementoSubmenu"><a href="#productos" onclick="marcarPestana('CatalogoChuches', 'tabGolosinas')">Golosinas</a></li>
+<li class="elementoSubmenu"><a href="#productos" onclick="marcarPestana('CatalogoChocolatinas', 'tabChocolatinas')">Chocolatinas</a></li>
+<li class="elementoSubmenu"><a href="#productos" onclick="marcarPestana('CatalogoGlobos', 'tabGlobos')">Globos</a></li>
+	</ul>
+	</li>
+	<li class="elementoMenu"><a href="#servicios" style="text-decoration:none">Nuestros servicios</a>
+	
+	</li>
+	<li class="elementoMenu"><a href="#contacto" style="text-decoration:none">Contacto</a></li>
+</ul>
+</nav>
+</section>	
+
+
+
+
+<h1 id="tituloEncabezado">Sweet wall </h1>
+<h2 id="subtituloEncabezado"> Todo lo necesario para endulzar tu evento</h2>
+</header>
+
+
+<section id="galeria">
+	
+<h2 class="tituloSeccion" onclick="modalLightBoxG()" data-aos="fade-up">Galeria</h2>
+<div id="contenedorGaleria">
+	
+<div >
+	<img class="imgGaleria" src="Media/galeria1.jpg">
+</div>
+<div >
+	<img class="imgGaleria" src="Media/galeria2.jpg">
+</div>
+<div >
+	<img class="imgGaleria" src="Media/galeria3.jpg">
+</div>
+<div >
+	<img class="imgGaleria" src="Media/galeria5.png">
+</div>
+<div >
+	<img class="imgGaleria" src="Media/galeria4.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria6.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria7.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria8.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria9.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria10.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria11.jpg">
+</div>
+<div>
+	<img class="imgGaleria" src="Media/galeria12.jpg">
+</div>
+
+
+</div>
+
+<div id="modalLightBoxG">
+	<div id="imageToShow">
+	</div>
+<button class="lbButton bRight" onclick="nextImgGal()">
+	<i class="fa-solid fa-angle-right"></i>
+</button>
+<button class="lbButton bLeft" onclick="prevImgGal()">
+	<i class="fa-solid fa-angle-left"></i>
+
+</button>
+</div>
+
+
+</section>
+
+<section id="productos">
+<h2 class="tituloSeccion" data-aos="flip-up">Nuestros productos</h2>
+
+<div id="contenedorEtiquetasPestanas">
+	<p id="tabGolosinas" class="etiquetaPestanas pestanaActiva" onclick="marcarPestana('CatalogoChuches', 'tabGolosinas')">Golosinas</p>
+	<p id="tabChocolatinas" class="etiquetaPestanas" onclick="marcarPestana('CatalogoChocolatinas', 'tabChocolatinas')">Chocolatinas</p>
+	<p id="tabGlobos" class="etiquetaPestanas" onclick="marcarPestana('CatalogoGlobos', 'tabGlobos')">Globos</p>
+</div>	
+
+
+<div class="contenedorProductos" id="CatalogoChuches">
+	<div class="producto"> 
+		<div class="imagenProducto" >
+			<img src="Media/ggelatinosa.jpg">
+		</div>
+		<p class="nombreProducto">Gelatinosas</p>
+		
+	</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/gelatinosa2.jpg">
+		</div>
+		<p class="nombreProducto">Gelatinosas</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/gelatinosa3.jpg">
+		</div>
+		<p class="nombreProducto">Gelatinosas</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/pica2.jpg">
+		</div>
+		<p class="nombreProducto">Pica-pica</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/gpica.jpg">
+		</div>
+		<p class="nombreProducto">Pica-pica</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/pica3.jpg">
+		</div>
+		<p class="nombreProducto">Pica-pica</p>
+		
+</div>
+</div>
+
+
+<div class="contenedorProductos" id="CatalogoChocolatinas">
+	<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/choco1.jpg">
+		</div>
+		<p class="nombreProducto">Tableta chocolate</p>
+		
+	</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/choco2.jpg">
+		</div>
+		<p class="nombreProducto">Tableta chocolate</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/choco3.jpg">
+		</div>
+		<p class="nombreProducto">Tableta chocolate</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/chocolatinas.jpg">
+		</div>
+		<p class="nombreProducto">Bombones</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/chocolatinas2.jpg">
+		</div>
+		<p class="nombreProducto">Bombones</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/chocolatinas3.jpg">
+		</div>
+		<p class="nombreProducto">Bombones</p>
+		
+</div>
+</div>
+
+
+
+<div class="contenedorProductos" id="CatalogoGlobos">
+	<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/gredondo.jpg">
+		</div>
+		<p class="nombreProducto">Normales</p>
+		
+	</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/normales2.jpg">
+		</div>
+		<p class="nombreProducto">Normales</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/normales3.jpg">
+		</div>
+		<p class="nombreProducto">Normales</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/galeria12.jpg">
+		</div>
+		<p class="nombreProducto">Helio</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/ghelio.jpg">
+		</div>
+		<p class="nombreProducto">Helio</p>
+		
+</div>
+
+<div class="producto"> 
+		<div class="imagenProducto">
+			<img src="Media/helio3.jpg">
+		</div>
+		<p class="nombreProducto">Helio</p>
+		
+</div>
+</div>
+
+
+</section>
+<section id="servicios">
+	<h2 class="tituloSeccion" data-aos="fade-up">Nuestros servicios</h2>
+	<div id="contenedorServicios">
+		<div class="cajaTexto">
+			<p>En la celebración de cualquier evento, las golosinas son siempre uno de los bocaditos más esperados por todo los invitados. Como cada asistente tiene sus propios gustos, y sabemos que no es fácil acertar, en Vidal Golosinas te damos múltiples ideas con las mejores chuches para eventos entre las que elegir tus favoritas.
+
+			Perfectas para hacer un Candy Bar, para preparar una tarta de chuches personalizada, rellenar una piñata infantil, hacer bolsitas de chuches, brochetas dulces variadas, o incluso para organizar divertidas gymkanas y juegos con deliciosas recompensas. ¡Siempre hay una excusa para amenizar el momento con una deliciosa chuchería!
+			</p>
+	</div>
+	<div id="multimedia">
+		<div id="videoServicios">
+			<iframe width="866" height="487" src="https://www.youtube.com/embed/Ue1ynq18OHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+
+	</div>
+
+	</div>
+</section>
+
+
+
+<section id="contacto">
+	
+<h2 class="tituloSeccion" data-aos="fade-up">Contacto</h2>
+
+<div id="contenedorContacto">
+
+<form action="" id="formulario">
+	
+<p id="textoContacto">Contacta con nosotros:</p>
+
+<input id="formNombre" type="text" name="nombre" placeholder="Nombre y apellidos" required>
+
+<input id="formNumero" type="number" name="numero" placeholder="Número de personas (aprox.)" required>
+
+<input id="formFecha" type="date" name="fecha" placeholder="Fecha" required>
+
+<input id="formPhone" type="phone" name="phone" required pattern="\d{9}" minlength="9" maxlength="9" placeholder="Número telefónico" data-tipo="number">
+
+<button id="botonEnviar" onclick="modalReserva()" type="button">Enviar</button>
+
+</form>
+
+</div>
+
+
+
+</section>
+<footer id="pie">
+	<div id="redesSociales">
+	  <div class="imgRs1"><img src="Media/logo1.png"></div>
+	  <div class="imgRs2"><img src="Media/logo2.png"></div>
+	  <div class="imgRs3"><img src="Media/logo3.png"></div>
+	</div>
+  </footer>
+
+  <script>
+	modalBienvenida();
+	readyLightBox();
+	setInterval(heroSlideShow, 3000);
+	setInterval(slideShowAnim, 3000);
+
+  </script>
+
+
+<script>
+	AOS.init();
+</script>
+</body>
+</html>
